@@ -94,3 +94,51 @@ p {
     padding: 2.5rem 1.75rem;
   }
 }
+
+.agents {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+  text-align: left;
+}
+
+.agent-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.25rem 1.35rem;
+  transition: border-color var(--transition);
+}
+
+.agent-card:hover {
+  border-color: rgba(204, 0, 0, 0.3);
+}
+
+.agent-icon {
+  font-size: 1.4rem;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.agent-card h2 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+  margin-bottom: 0.4rem;
+}
+
+.agent-card p {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--color-muted);
+  max-width: none;
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .agents {
+    grid-template-columns: 1fr;
+  }
+}
