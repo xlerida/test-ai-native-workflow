@@ -160,5 +160,5 @@ p {
 .agent-accordion__trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
 .agent-accordion__trigger[aria-expanded="true"] .agent-accordion__icon { transform: rotate(180deg); }
 .agent-accordion__icon { display: inline-block; transition: transform 0.2s ease; }
-.agent-accordion__body { overflow: hidden; max-height: 0; transition: max-height 0.3s ease, padding 0.3s ease; padding: 0; }
-.agent-accordion__body:not([hidden]) { max-height: 1000px; padding-bottom: 1rem; }
+.agent-accordion__body { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.agent-accordion__trigger[aria-expanded="true"] + .agent-accordion__body { max-height: 1000px; }
