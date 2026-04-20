@@ -1,8 +1,9 @@
 :root {
   --color-bg: #0d0d0f;
   --color-surface: #16161a;
-  --color-accent: #2563EB;
-  --color-accent-2: #60A5FA;
+  --color-accent: #FACC15;
+  --color-accent-2: #FDE047;
+  --color-accent-text: #111827;
   --color-text: #e8e8ed;
   --color-muted: #888899;
   --font-sans: system-ui, -apple-system, sans-serif;
