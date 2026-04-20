@@ -1,9 +1,9 @@
 :root {
   --color-bg: #0d0d0f;
   --color-surface: #16161a;
-  --color-accent: yellow;
-  --color-accent-2: yellow;
-  --color-text: yellow;
+  --color-accent: #2563EB;
+  --color-accent-2: #60A5FA;
+  --color-text: #e8e8ed;
   --color-muted: #888899;
   --font-sans: system-ui, -apple-system, sans-serif;
   --font-mono: ui-monospace, "Cascadia Code", monospace;
