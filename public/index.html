@@ -1,97 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello World</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <span class="badge">v0.1.0</span>
-      <h1>Hello, <span class="accent">World</span></h1>
-      <p>A minimal web project — work in progress.</p>
-      <section class="agents">
-        <ul class="agent-list">
-          <li class="agent-accordion" id="agent-1">
-            <button
-              id="agent-1-trigger"
-              class="agent-accordion__trigger"
-              aria-expanded="false"
-              aria-controls="agent-1-body"
-            >
-              <span class="agent-accordion__title">🎯 Orchestrator</span>
-              <span class="agent-accordion__icon" aria-hidden="true">▾</span>
-            </button>
-            <div
-              id="agent-1-body"
-              class="agent-accordion__body"
-              role="region"
-              aria-labelledby="agent-1-trigger"
-            >
-              <p class="agent-accordion__description">Coordinates tasks, routes between specialists, and sends status updates.</p>
-            </div>
-          </li>
-          <li class="agent-accordion" id="agent-2">
-            <button
-              id="agent-2-trigger"
-              class="agent-accordion__trigger"
-              aria-expanded="false"
-              aria-controls="agent-2-body"
-            >
-              <span class="agent-accordion__title">🏛️ Arch &amp; Design</span>
-              <span class="agent-accordion__icon" aria-hidden="true">▾</span>
-            </button>
-            <div
-              id="agent-2-body"
-              class="agent-accordion__body"
-              role="region"
-              aria-labelledby="agent-2-trigger"
-            >
-              <p class="agent-accordion__description">Decides how things should be built and produces design specs.</p>
-            </div>
-          </li>
-          <li class="agent-accordion" id="agent-3">
-            <button
-              id="agent-3-trigger"
-              class="agent-accordion__trigger"
-              aria-expanded="false"
-              aria-controls="agent-3-body"
-            >
-              <span class="agent-accordion__title">⚙️ Implementation</span>
-              <span class="agent-accordion__icon" aria-hidden="true">▾</span>
-            </button>
-            <div
-              id="agent-3-body"
-              class="agent-accordion__body"
-              role="region"
-              aria-labelledby="agent-3-trigger"
-            >
-              <p class="agent-accordion__description">Builds features, manages git, and opens pull requests.</p>
-            </div>
-          </li>
-          <li class="agent-accordion" id="agent-4">
-            <button
-              id="agent-4-trigger"
-              class="agent-accordion__trigger"
-              aria-expanded="false"
-              aria-controls="agent-4-body"
-            >
-              <span class="agent-accordion__title">🔍 Reviewer</span>
-              <span class="agent-accordion__icon" aria-hidden="true">▾</span>
-            </button>
-            <div
-              id="agent-4-body"
-              class="agent-accordion__body"
-              role="region"
-              aria-labelledby="agent-4-trigger"
-            >
-              <p class="agent-accordion__description">Reviews PRs on GitHub, approves or requests changes.</p>
-            </div>
-          </li>
-        </ul>
-      </section>
-    </div>
-    <script src="accordion.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello World</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <span class="badge">v0.1.0</span>
+    <h1>Agentic <span class="accent">AI Setup</span></h1>
+    <p>A minimal web project — work in progress.</p>
+    <section class="agents">
+      <ul class="agent-list">
+        <li class="agent-accordion" id="agent-1">
+          <button id="agent-1-trigger" class="agent-accordion__trigger" aria-expanded="false"
+            aria-controls="agent-1-body">
+            <span class="agent-accordion__title">🎯 Orchestrator</span>
+            <span class="agent-accordion__icon" aria-hidden="true">▾</span>
+          </button>
+          <div id="agent-1-body" class="agent-accordion__body" role="region" aria-labelledby="agent-1-trigger">
+            <p class="agent-accordion__description">Coordinates tasks, routes between specialists, and sends status
+              updates.</p>
+          </div>
+        </li>
+        <li class="agent-accordion" id="agent-2">
+          <button id="agent-2-trigger" class="agent-accordion__trigger" aria-expanded="false"
+            aria-controls="agent-2-body">
+            <span class="agent-accordion__title">🏛️ Arch &amp; Design</span>
+            <span class="agent-accordion__icon" aria-hidden="true">▾</span>
+          </button>
+          <div id="agent-2-body" class="agent-accordion__body" role="region" aria-labelledby="agent-2-trigger">
+            <p class="agent-accordion__description">Decides how things should be built and produces design specs.</p>
+          </div>
+        </li>
+        <li class="agent-accordion" id="agent-3">
+          <button id="agent-3-trigger" class="agent-accordion__trigger" aria-expanded="false"
+            aria-controls="agent-3-body">
+            <span class="agent-accordion__title">⚙️ Implementation</span>
+            <span class="agent-accordion__icon" aria-hidden="true">▾</span>
+          </button>
+          <div id="agent-3-body" class="agent-accordion__body" role="region" aria-labelledby="agent-3-trigger">
+            <p class="agent-accordion__description">Builds features, manages git, and opens pull requests.</p>
+          </div>
+        </li>
+        <li class="agent-accordion" id="agent-4">
+          <button id="agent-4-trigger" class="agent-accordion__trigger" aria-expanded="false"
+            aria-controls="agent-4-body">
+            <span class="agent-accordion__title">🔍 Reviewer</span>
+            <span class="agent-accordion__icon" aria-hidden="true">▾</span>
+          </button>
+          <div id="agent-4-body" class="agent-accordion__body" role="region" aria-labelledby="agent-4-trigger">
+            <p class="agent-accordion__description">Reviews PRs on GitHub, approves or requests changes.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>
+  <script src="accordion.js"></script>
+</body>
+
 </html>

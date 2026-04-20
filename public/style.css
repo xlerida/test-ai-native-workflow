@@ -1,17 +1,19 @@
 :root {
-  --color-bg:       #0d0d0f;
-  --color-surface:  #16161a;
-  --color-accent:   #ffffff;
-  --color-accent-2: #ff6b6b;
-  --color-text:     #e8e8ed;
-  --color-muted:    #888899;
-  --font-sans:      system-ui, -apple-system, sans-serif;
-  --font-mono:      ui-monospace, "Cascadia Code", monospace;
-  --radius:         12px;
-  --transition:     0.2s ease;
+  --color-bg: #0d0d0f;
+  --color-surface: #16161a;
+  --color-accent: yellow;
+  --color-accent-2: yellow;
+  --color-text: yellow;
+  --color-muted: #888899;
+  --font-sans: system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", monospace;
+  --radius: 12px;
+  --transition: 0.2s ease;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -20,7 +22,7 @@
 body {
   font-family: var(--font-sans);
   background-color: var(--color-bg);
-  background-image: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255,255,255,0.15), transparent);
+  background-image: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255, 255, 255, 0.15), transparent);
   color: var(--color-text);
   display: flex;
   align-items: center;
@@ -32,12 +34,12 @@ body {
 .container {
   text-align: center;
   background: var(--color-surface);
-  border: 1px solid rgba(255,255,255,0.07);
+  border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: var(--radius);
   padding: 3.5rem 4rem;
   max-width: 560px;
   width: 100%;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 20px 60px rgba(0,0,0,0.5);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 .badge {
@@ -47,8 +49,8 @@ body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-accent-2);
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 999px;
   padding: 0.25rem 0.75rem;
   margin-bottom: 1.25rem;
@@ -87,6 +89,7 @@ p {
   color: var(--color-muted);
   max-width: 38ch;
   margin: 0 auto;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 480px) {
@@ -97,7 +100,6 @@ p {
 
 .agents {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-top: 2.5rem;
   text-align: left;
@@ -144,8 +146,17 @@ p {
 }
 
 /* Accordion */
-.agent-list { list-style: none; margin: 0; padding: 0; }
-.agent-accordion { border-bottom: 1px solid #e0e0e0; }
+.agent-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.agent-accordion {
+  border-bottom: 1px solid #e0e0e0;
+}
+
 .agent-accordion__trigger {
   all: unset;
   display: flex;
@@ -157,8 +168,27 @@ p {
   font-size: 1rem;
   font-weight: 600;
 }
-.agent-accordion__trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
-.agent-accordion__trigger[aria-expanded="true"] .agent-accordion__icon { transform: rotate(180deg); }
-.agent-accordion__icon { display: inline-block; transition: transform 0.2s ease; }
-.agent-accordion__body { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
-.agent-accordion__trigger[aria-expanded="true"] + .agent-accordion__body { max-height: 1000px; }
+
+.agent-accordion__trigger:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.agent-accordion__trigger[aria-expanded="true"] .agent-accordion__icon {
+  transform: rotate(180deg);
+}
+
+.agent-accordion__icon {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.agent-accordion__body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.agent-accordion__trigger[aria-expanded="true"]+.agent-accordion__body {
+  max-height: 1000px;
+}
